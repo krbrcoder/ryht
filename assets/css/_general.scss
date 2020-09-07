@@ -1,0 +1,101 @@
+.hide-sm {
+	display:none;
+}
+.light-gray-gradient {
+	background: rgb(238,238,238);
+	background: linear-gradient(90deg, #EEE 30%, #F9F9F9 100%);
+	border-bottom: 1px solid $gray;
+}
+#future-of-texas {
+	background: #EEE;
+	border-right: 1px solid $gray;
+	.padding {
+		padding: 70px 45px 0px 70px;
+		text-align: center;
+	}
+	.main-img {
+		max-width:300px;
+		margin: 20px auto 50px;
+	}
+}
+#foundation-policy-advocacy-storytelling {
+	background: #F9F9F9;
+	.padding {
+		padding: 20px 40px 20px 0;
+		margin-left: -14px;
+	}
+	amp-fit-text {
+		width: 49.5%;
+		display:inline-block;
+		text-align: center;
+		&:nth-child(odd) {
+			border-right:1px solid $gray;
+		}
+		&:nth-child(1) {
+			border-bottom: 1px solid $gray;
+			margin-bottom: -5px;
+		}
+		&:nth-child(2) {
+			border-bottom: 1px solid $gray;
+			margin-bottom: -5px;
+			margin-left: -4px;
+		}
+	}
+	.circle {
+		border-radius: 50%;
+		background: white;
+		margin: 0 auto 25px;
+		width: 120px;
+		height: 120px;
+		box-shadow: 0px 2px 6px rgba(190,190,190,.85);
+	}
+}
+.sr-only {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px); /* 1 */
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);  /* 2 */
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap; 
+}
+#subscribe {
+	background: $lightblue;
+	align-content: center;
+	text-align: center;
+	padding: 5px 0 30px;
+	h2 {
+		font-weight: 400;
+		color: $blue;
+	}
+}
+#featured-content {
+	background-color: #656565;
+	color: #FFF;
+	.row {
+		padding: 70px 130px;
+	}
+	.featured-img {
+		max-width: 490px;
+		border: 3px solid white;
+	}
+}
+hr {
+	&.blue-line {
+		width:100px;
+		border: 3px solid #00afe3;
+		margin: 0;
+		display:block;
+	}
+}
+#other-featured-content {
+	background: rgb(101,101,101);
+	background: linear-gradient(180deg, rgba(101,101,101,1) 30%, rgba(255,255,255,1) 30.1%, rgba(255,255,255,1) 100%);
+	.col {
+		width:32.5%;
+	}
+}
