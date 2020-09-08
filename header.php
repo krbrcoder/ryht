@@ -11,23 +11,25 @@
     <link rel="preload" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logos/RaiseYourHandTexas_logo-black.jpg" as="image">
 		<link rel="canonical" href="https://www.raiseyourhandtexas.org">
     <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
-    <?php // wp_head(); ?>
+    <?php wp_head(); ?>
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 		
     <?php /* AMP EXTENSIONS */?>
-	  <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
-		<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
 		<script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
 		<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
-		<script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
-		<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-		<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
 		<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+		<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+		<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
 		<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+	  <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
  		<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
-<!--
 		<script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+		<script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+		<script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+
+<!--
+		<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 		<script async custom-element="amp-fx-flying-carpet" src="https://cdn.ampproject.org/v0/amp-fx-flying-carpet-0.1.js"></script>
 -->
 
@@ -56,7 +58,7 @@
           alt="Raise Your Hand Texas Logo"
         ></amp-img>
 			</div>
-			<amp-mega-menu height="75" layout="fixed-height" class="ryht-nav">
+			<amp-mega-menu height="75" layout="fixed-height" class="ryht-nav hide-sm">
 			  <nav>
 			    <ul>
 			      <li>
@@ -147,7 +149,7 @@
 			    </ul>
 			  </nav>
 			</amp-mega-menu>
-      <span role="button" class="search"><span class="sr-only">Search Icon</span></span>
+      <span role="button" class="search hide-sm"><span class="sr-only">Search Icon</span></span>
       <div id="search-bar">
         <form class="sample-form"
 				  method="GET"
@@ -161,5 +163,9 @@
 				</form>
       </div>
 			<?php /* END MEGA MENU */ ?>
+
+				  <a class="target-anchor" id="top"></a>
+				  <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
+				  </amp-position-observer>
 
 	  </header>

@@ -1,5 +1,15 @@
-.hide-sm {
-	display:none;
+@media (max-width:599px) {
+	.hide-sm {
+		visibility: hidden;
+	}	
+}
+@media (min-width:600px) {
+	.hide-sm {
+		visibility: visible;
+	}
+}
+.p-2 {
+	padding-right: 2rem;
 }
 .light-gray-gradient {
 	background: rgb(238,238,238);
@@ -9,21 +19,21 @@
 #future-of-texas {
 	background: #EEE;
 	border-right: 1px solid $gray;
-	.padding {
-		padding: 70px 45px 0px 70px;
-		text-align: center;
-	}
+	text-align: center;
+	padding-top: 45px;
 	.main-img {
 		max-width:300px;
-		margin: 20px auto 50px;
+		margin: 20px auto 30px;
+	}
+	p {
+		margin: 0 45px 10px;
 	}
 }
 #foundation-policy-advocacy-storytelling {
 	background: #F9F9F9;
-	.padding {
-		padding: 20px 40px 20px 0;
-		margin-left: -14px;
-	}
+	padding-top: 45px;
+	padding-bottom: 40px;
+	padding-left: 0;
 	amp-fit-text {
 		width: 49.5%;
 		display:inline-block;
@@ -47,7 +57,7 @@
 		margin: 0 auto 25px;
 		width: 120px;
 		height: 120px;
-		box-shadow: 0px 2px 6px rgba(190,190,190,.85);
+		box-shadow: $boxshadow;
 	}
 }
 .sr-only {
@@ -67,15 +77,21 @@
 	background: $lightblue;
 	align-content: center;
 	text-align: center;
-	padding: 5px 0 30px;
+	padding-top: 5px;
+	padding-bottom: 30px;
 	h2 {
+		font-size: 24px;
 		font-weight: 400;
 		color: $blue;
+		margin-bottom: 5px;
 	}
 }
 #featured-content {
 	background-color: #656565;
 	color: #FFF;
+	h2 {
+		margin-top: 0;
+	}
 	.row {
 		padding: 70px 130px;
 	}
@@ -87,15 +103,165 @@
 hr {
 	&.blue-line {
 		width:100px;
-		border: 3px solid #00afe3;
-		margin: 0;
+		border: 3px solid $vividblue;
+		margin: 5px 0 27px;
 		display:block;
 	}
 }
 #other-featured-content {
 	background: rgb(101,101,101);
-	background: linear-gradient(180deg, rgba(101,101,101,1) 30%, rgba(255,255,255,1) 30.1%, rgba(255,255,255,1) 100%);
-	.col {
-		width:32.5%;
+	background: linear-gradient(180deg, rgba(101,101,101,1) 18%, #FFF 18.1%, #FFF 80%, #EEE 80.1%);
+	.container {
+		padding-bottom: 2%;		
 	}
+	.light-gray-bg {
+		background-color: $lightgray;
+		padding-bottom: 35px;
+		padding-left: 20px;
+		padding-right: 20px;
+		box-shadow: $boxshadow;
+		z-index: 1;
+	}
+	h2 {
+		margin: 25px 30px 45px;
+		width: 100%;
+	}
+	h3 {
+		margin: 20px 0;
+	}
+	.category-bg {
+		&-1 {
+			background: url('../wp-content/themes/ryht/assets/images/category-1-bg.png') no-repeat;
+			background-position: center center;
+			.image {
+				top: 70px;
+				width: 335px;
+				margin: 0 auto;
+			}
+		}
+		&-3 {
+			background-color: #1b1b1b;
+			.image {
+// 				bottom: -120px;
+				height: 459px;
+			}
+		}
+		&-1, &-2, &-3 {
+			max-width:100%;
+			height: 459px;
+			border: 1px solid $gray;
+			&:hover, &:active, &:focus {
+				box-shadow: $boxshadow;
+				.image {
+					// place zoom animation here???
+				}
+			}
+		}
+	}
+	.category {
+		&-title {
+			font-size: .8rem;
+			margin-top: 10px;
+			margin-bottom: 0;
+			display:block;
+		}
+		&-subtitle {
+			color: $textcolor;
+		}
+	}
+	.button {
+		text-align: center;
+		margin: 0 auto;
+		display:block;
+		width: 147px;
+	}
+}
+#latest-blogs {
+	padding: 0 0 100px;
+	background: #EEEEEE;
+	h2 {
+		margin: 0 100px 50px;
+	}
+	amp-carousel {
+		margin: 0 65px;
+	}
+	.blog-carousel-item {
+		amp-img {
+			max-width: 75px;
+			clear: both;
+		}
+		.text-area {
+			display: block;
+			margin-top: -78px;
+			margin-left: 85px;
+		}
+		.date {
+			color: $textcolor;
+			display:block;
+			width: 100%;
+		}
+		.article-title {
+			margin-top: 10px;
+			font-size: .8rem;
+			color: $textcolor;
+			display:block;
+			width: 100%;
+		}
+	}
+	.amp-carousel-button {
+		border-radius: 50%;
+		color: $textcolor;
+		background-repeat: no-repeat;
+		&.amp-carousel-button-prev {
+			background: url('../wp-content/themes/ryht/assets/images/prev-arrow.svg') no-repeat;
+			background-color: white;
+			background-size: 8px;
+			background-position: 11px 10px;
+		}
+		&.amp-carousel-button-next {
+			background: url('../wp-content/themes/ryht/assets/images/next-arrow.svg') no-repeat;
+			background-color: white;
+			background-size: 8px;
+			background-position: 14px 10px;
+		}
+	}
+	.view-blogs {
+		margin-top: 20px;
+		font-size: .85rem;
+		float: right;
+		text-align: right;
+		margin-right: 80px;
+		color: $vividblue;
+		&:after {
+			width: 15px;
+	    height: 15px;
+	    display: inline-block;
+	    margin: -3px 3px -3px 8px;
+			content: "";
+			background: url('../wp-content/themes/ryht/assets/images/lightblue-arrow.svg') no-repeat;
+		}
+	}
+}
+.scrollToTop {
+  color: white;
+  font-size: 1.15em;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: rgba(90,90,90,.75);
+  bottom: 35px;
+  right: 35px;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+}
+/* we move the anchor down to componsate the fixed header */
+.target {
+  position: relative;
+}
+.target-anchor {
+  position: absolute;
+  top: -72px;
+  left: 0;
 }

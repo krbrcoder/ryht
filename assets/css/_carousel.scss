@@ -1,5 +1,47 @@
+.carousel-section {
+	width: 93%;
+}
 .carousel-section>* {
-	width:25%;
+	width:22%;
 	height:100px;
 	float:left;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.blog-carousel-item {
+	padding: 5px 10px;
+	transition: ease-in 200ms;
+	&:hover, &:active, &:focus {
+		background: white;
+	}
+}
+.amp-carousel-slide {
+	opacity:0;
+}
+.amp-carousel-slide[aria-hidden=false] {
+	transition:opacity 1s;
+	opacity:1;
+}
+.indicator-wrapper {
+	width: 110px;
+	margin: 20px auto;
+	.dots {
+		span {
+			width: 10px;
+	    height: 10px;
+	    margin-right: 10px;
+	    border: 2px solid $gray;
+	    display: inline;
+	    float: left;
+	    border-radius: 50%;
+	    outline: none;
+	    &.current {
+		    background: $darkgray;
+		    border-color: $darkgray;
+	    }
+	    &:last-child {
+		    margin-right: 0;
+	    }
+		}
+	}
 }

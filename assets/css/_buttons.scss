@@ -1,17 +1,38 @@
 a.button {
 	text-align: center;
-	font-size: 22px;
-	&.btn-outline-blue {
-		border: 2px solid $blue;
+	font-size: 20px;
+	margin-top: 20px;
+	&.btn-outline-blue, &.btn-outline-white {
 		padding: 8px 10px;
 		display:inline-block;
+		&:after {
+			width: 18px;
+	    height: 18px;
+	    display: inline-block;
+	    margin: -3px 3px -3px 8px;
+		}
+	}
+	&.btn-outline-blue {
+		border: 2px solid $blue;
 		color: $blue;
+		&:after {
+			content: "";
+			background: url('../wp-content/themes/ryht/assets/images/blue-arrow.svg') no-repeat;
+		}
+		&.no-arrow {
+			&:after {
+				content: none;
+				background: none;
+			}
+		}
 	}
 	&.btn-outline-white {
 		border: 2px solid white;
-		padding: 8px 10px;
-		display:inline-block;
 		color: white;
+		&:after {
+			content: "";
+			background: url('../wp-content/themes/ryht/assets/images/white-arrow.svg') no-repeat;
+		}
 	}	amp-img {
 		max-width: 20px;
 		float:right;

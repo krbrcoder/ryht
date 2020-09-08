@@ -1,5 +1,5 @@
 body, html {
-	font-family: 'Montserrat',san-serif;
+	font-family: $fontfamily;
 }
 .aligncenter {
 	text-align: center;
@@ -10,4 +10,8 @@ p {
 a {
 	font-weight: 600;
 	text-decoration:none;
+	color: $primarycolor;
+}
+h2 {
+	font-size: 2.275rem;
 }

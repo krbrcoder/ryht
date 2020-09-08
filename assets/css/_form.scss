@@ -1,0 +1,49 @@
+#subscribe-form {
+	color: red;
+	.required{
+		font-size: 22px;
+		color: white;
+		position: absolute;
+		margin-left: 10px;
+    margin-top: -5px;		
+	}
+}
+input[type="text" i], input[type="email" i] {
+	color: $darkgray;
+	width: 70%;
+	font-size: 18px;
+	padding: 12px;
+	font-family: $fontfamily;
+	font-weight: 600;
+	margin-bottom: 30px;
+	border:none;
+}
+input[type="submit" i] {
+	display: block;
+  margin: 16px 0 0 249px;
+  padding: 12px;
+  background: transparent;
+  color: $primarycolor;
+  border: 2px solid $primarycolor;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: right;
+  font-family: $fontfamily;
+  width: 120px;
+}
+template.error {
+	background: rgba(255,255,255,.25);
+}
+#subscribe-cta-form {
+	input[type="submit" i] {
+		margin: 0 auto;
+		display: inline-block;
+	  color: $blue;
+	  border: 2px solid $blue;
+	  text-align: left;
+	}
+	input[type="text" i], input[type="email" i] {
+		width: 400px;
+		margin: 20px 40px 20px 0;
+	}
+}
