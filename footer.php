@@ -34,9 +34,6 @@
 						</div>
 					</div>
 				</footer>
-			  <!--
-			    We use 2 `amp-animation` elements to trigger the visibility of the button. The first one is for making the button visible...
-			  -->
 			  <amp-animation id="showAnim" layout="nodisplay">
 			    <script type="application/json">
 			      {
@@ -55,7 +52,6 @@
 			      }
 			    </script>
 			  </amp-animation>
-			  <!-- ... and the second one is for adding the button.-->
 			  <amp-animation id="hideAnim" layout="nodisplay">
 			    <script type="application/json">
 			      {
@@ -74,10 +70,6 @@
 			     }
 			    </script>
 			  </amp-animation>
-			  <!--## The scroll to top button -->
-			  <!--
-			    We use the `scrollTo` action to scroll the page when the button is tapped. Find more about actions [here](https://github.com/ampproject/amphtml/blob/master/spec/amp-actions-and-events.md).
-			  -->
 			  <button id="scrollToTopButton" on="tap:top.scrollTo(duration=350)" class="scrollToTop">⌃</button>
 			<?php /* END FOOTER */ ?>
 			<?php wp_footer(); ?>

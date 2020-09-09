@@ -36,7 +36,6 @@
 
     <?php /* FONT */?>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <?php $images = get_stylesheet_directory_uri().'/assets/images'; ?>
 
 		<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -51,27 +50,8 @@
     <?php endwhile; endif; ?>
 	  <header>
 
-			<div id="hamburger-menu" class="hide-lg">
-			  <div class="hamburger_wrapper">
-			    <div id="hamburger" tabindex="1" role="button" on="tap:hamburger.toggleClass(class='close'),nav-menu.toggleClass(class='now-active')">
-			      <span></span>
-			      <span></span>
-			      <span></span>
-			    </div>
-			  </div>
-			  <div id="nav-menu">
-			    <ul class="nav-list">
-			      <li><a href="#">Foundation</a></li>
-			      <li><a href="#">Advocacy</a></li>
-			      <li><a href="#">Policy</a></li>
-			      <li><a href="#">Stories</a></li>
-			      <li><a href="#">Newsroom</a></li>
-			      <li><a href="#">About Us</a></li>
-			    </ul>
-			  </div>
-			</div>
+			<?php	if ( $detect->isMobile() ) { get_template_part('parts/menu-mobile-menu'); } ?>
 
-			<?php /* BEGIN MEGA MENU */ ?>
 			<div id="logo-wrapper">
         <amp-img
           src="<?php echo $images; ?>/logos/ryht-logo-tiny.png"
@@ -81,51 +61,10 @@
         ></amp-img>
 			</div>
 
-			<?php	if ( !$detect->isMobile() ) { ?>
-			<div class="col">
-				<amp-mega-menu height="75" layout="fixed-height" class="ryht-nav hide-sm">
-				  <nav>
-				    <ul>
-				      <li>
-				        <span>Foundation</span>
-				      </li>
-				      <li>
-				        <span>Advocacy</span>
-				      </li>
-				      <li>
-				        <span>Policy</span>
-				      </li>
-				      <li>
-				        <span>Stories</span>
-				      </li>
-				      <li>
-				        <span>Newsroom</span>
-				      </li>
-				      <li>
-				        <span>About Us</span>
-				      </li>
-				    </ul>
-				  </nav>
-				</amp-mega-menu>
-			</div>
-      <span role="button" class="search hide-sm"><span class="sr-only">Search Icon</span></span>
-      <div id="search-bar">
-        <form class="sample-form"
-				  method="GET"
-				  action="/documentation/examples/api/submit-form"
-				  target="_top">
-				  <input type="search"
-				    placeholder="Search..."
-				    name="search">
-				  <input type="submit"
-				    value="OK">
-				</form>
-      </div>
-			<?php /* END MEGA MENU */ ?>
-		<?php } ?>
+			<?php	if ( !$detect->isMobile() ) { get_template_part('parts/menu-mega-menu'); } ?>
 
-				  <a class="target-anchor" id="top"></a>
-				  <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
-				  </amp-position-observer>
+		  <a class="target-anchor" id="top"></a>
+		  <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
+		  </amp-position-observer>
 
 	  </header>

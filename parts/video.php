@@ -1,6 +1,6 @@
     <?php $images = get_stylesheet_directory_uri().'/assets/images'; ?>
 	  <?php /* BEGIN VIDEO */ ?>
-	  <div class="container-fluid">
+	  <div id="video-wrapper" class="container-fluid">
 				<amp-video class="video"
 						width="1280"
 					  height="502"
