@@ -6,12 +6,7 @@
 	max-width:100%;
 }
 .blog-carousel-item {
-	width:22%;
-	height:100px;
-	float:left;
-	margin-right: 5px;
-	margin-left: 5px;
-	padding: 10px;
+	height:82px;
 	transition: ease-in 200ms;
 	&:hover, &:active, &:focus {
 		background: white;
@@ -54,6 +49,9 @@ amp-selector {
 #latest-blogs {
 	padding: 0 0 100px;
 	background: #EEEEEE;
+	.container {
+		margin: 0 auto;
+	}
 	amp-carousel {
 		margin: 0;
 	}

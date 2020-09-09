@@ -1,4 +1,7 @@
 footer {
+	.container {
+		margin: 0 auto;
+	}
 	&.gray-texture-bg {
 		background: url('../wp-content/themes/ryht/assets/images/footer-bg-edit.jpg') repeat;
 		border-bottom: 8px solid $primarycolor;

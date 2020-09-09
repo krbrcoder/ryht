@@ -23,6 +23,7 @@
     transform: translate3d(0,-2px,0);
   }
 }
+
 .spin {
   &:hover, &:active, &:focus {
     transform: rotate(360deg)scale(1.3);
@@ -35,59 +36,211 @@
 	-webkit-filter: grayscale(0) blur(0);
 	filter: grayscale(0) blur(0);
 	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+	transition: $transition;
 	&:hover {
+	  box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5);
 		-webkit-filter: grayscale(100%) blur(3px);
 		filter: grayscale(100%) blur(3px);
 	}
 }
 
-// CSS BOX HOVER EFFECT
-// https://codepen.io/Paul2512C/pen/JxKvpb
-.quotes .box:hover {
-  color: #f2f2f2;
-  box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5);
+// PURE CSS HOVER BLUR
+// Found here: https://codepen.io/russpate/pen/qRaepv
+
+.box-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin: 0 auto;
 }
 
-.quotes .bg {
+.box{
+  padding:15px;
+  width: 30%;
+  transition: $transition;
+  cursor: pointer;
+}
+
+@media (min-width:600px) {
+	.box-wrap:hover .box{
+	  filter:blur(3px);
+	  opacity:.5;
+	  transform: scale(.98);
+	  box-shadow:none;
+	}
+	.box-wrap:hover .box:hover{
+	  transform:scale(1);
+	  filter:blur(0px);
+	  opacity:1;
+	  box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+	}
+}
+
+@media (max-width:599px) {
+	.box {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+// BOX WITH MAGIC ZOOM EFFECT
+// Found here: https://codepen.io/yancy/pen/LBbvQZ
+.magic-box {
+	cursor: pointer;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0;
-  transition: all 0.5s ease-in;
-  pointer-events: none;
-  width: 100%;
-  height: 200%;
+  width: 47%;
+  height: 312px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   overflow: hidden;
+  -webkit-transition: -webkit-box-shadow ease .4s;
+  transition: -webkit-box-shadow ease .4s;
+  transition: box-shadow ease .4s;
+  transition: box-shadow ease .4s, -webkit-box-shadow ease .4s;
+}
+ 
+.icon {
+	cursor: pointer;
+  position: relative;
+  margin-top: 8px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transition-delay: 0.32s;
+          transition-delay: 0.32s;
+  will-change: transform;
+} 
+.icon_bg {
+	margin-top: -40px;
+  width: 125px;
+  height: 125px;
+  border-radius: 100%;
+  border: 1px solid rgba(225, 227, 232, 0.18);
+  -webkit-box-shadow: $boxshadow;
+         box-shadow: $boxshadow;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  will-change: transform;
+} 
+ .title {
+	cursor: pointer;
+  position: relative;
+  margin-top: 20px;
+  font-size: 22px;
+  transition: all 0.6s ease;
+  -webkit-transition-delay: 0.32s;
+          transition-delay: 0.32s;
+}
+.super-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width:599px) {
+	.super-box {
+		width: 100%;
+		height: 230px;
+		border-bottom: 1px solid $gray;
+	}
 }
 
-.quotes .box.box1:hover,
-.quotes .box.box1:hover~.bg {
-  opacity: 1;
-  background: #e2a9e5;
-background: -moz-linear-gradient(-45deg, #e2a9e5 15%, #2b94e5 100%);
-background: -webkit-linear-gradient(-45deg, #e2a9e5 15%,#2b94e5 100%);
-background: linear-gradient(135deg, #e2a9e5 15%,#2b94e5 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2a9e5', endColorstr='#2b94e5',GradientType=1 );
-}
-
-.quotes .box.box2:hover,
-.quotes .box.box2:hover~.bg {
-  opacity: 1;
-  background: #632c65;
-background: -moz-linear-gradient(-45deg, #632c65 15%, #56a5e2 100%);
-background: -webkit-linear-gradient(-45deg, #632c65 15%,#56a5e2 100%);
-background: linear-gradient(135deg, #632c65 15%,#56a5e2 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#632c65', endColorstr='#56a5e2',GradientType=1 );
-}
-
-.quotes .box.box3:hover,
-.quotes .box.box3:hover~.bg {
-  opacity: 1;
-  background: #4b384c;
-background: -moz-linear-gradient(-45deg, #4b384c 15%, #da5de2 100%);
-background: -webkit-linear-gradient(-45deg, #4b384c 15%,#da5de2 100%);
-background: linear-gradient(135deg, #4b384c 15%,#da5de2 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', endColorstr='#da5de2',GradientType=1 );
+@media (min-width: 600px) {
+	.super-box {
+	  width: 49.5%;
+	  height: 314px;
+		&:nth-child(odd) {
+			border-right:1px solid $gray;
+		}
+		&:nth-child(1) {
+			border-bottom: 1px solid $gray;
+			margin-bottom: -5px;
+		}
+		&:nth-child(2) {
+			border-bottom: 1px solid $gray;
+			margin-bottom: -5px;
+			margin-left: -4px;
+		}
+	}
+	.super-box:hover .title {
+		margin-top: -40px;
+	}
+	 
+	.super-box:hover .magic-box {
+	  -webkit-transition-delay: 0.32s;
+	          transition-delay: 0.32s;
+	}
+	 
+	.super-box:hover .icon_bg {
+	  -webkit-transform: translateY(-32px) scale(6);
+	          transform: translateY(-32px) scale(6);
+	          background: none;
+	}
+	 
+	.super-box:hover .icon {
+	  -webkit-transform: translateY(-48px) scale(1.4);
+	          transform: translateY(-48px) scale(1.4);
+	}
+	  
+	.magic-box::after {
+	  position: absolute;
+	  width: 90%;
+	  top: 231px;
+	  opacity: 0;
+	  font-size: 13px;
+	  color: $textcolor;
+	  line-height: 20px;
+	  -webkit-transition: all 0.3s ease;
+	  transition: all 0.3s ease;
+	  -webkit-transition-delay: 0.32s;
+	          transition-delay: 0.32s;
+	  text-align: center;
+	}
+	.magic-box-1::after {
+	  content: "The Raise Your Hand Texas Foundation is a 501(c)(3) nonprofit organization that supports public education.";
+	}
+	.magic-box-2::after {
+	  content: "Through equity and innovation we can create a world-class school system that fuels a brighter future for all Texans.";
+	}
+	.magic-box-3::after {
+	  content: "The future of Texas — our communities, our economy, our citizenry — depends on how well we prepare all students today.";
+	}
+	.magic-box-4::after {
+	  content: "Journey into the immersive stories of people, schools, and organizations that are reinventing public education for the future.";
+	} 
+	.super-box:hover .magic-box::after {
+	  opacity: 1;
+	}
 }

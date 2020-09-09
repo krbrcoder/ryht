@@ -6,9 +6,9 @@
 						<h2>Latest Blogs</h2>
 						<amp-carousel id="latest-blogs-carousel" height="100" width="1200" layout="responsive" type="slides" on="slideChange:AMP.setState({selected: {slide: event.index}}),carousel-indicators.toggle(index=event.index, value=true)" controls autoplay loop>
 			
-					    <div class="carousel-section">
+					    <div class="carousel-section box-wrap">
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-1.png"
@@ -24,7 +24,7 @@
 						      </a>
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-2.png"
@@ -41,7 +41,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-3.png"
@@ -58,7 +58,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-4.png"
@@ -77,9 +77,9 @@
 			
 					    </div>
 			
-					    <div class="carousel-section">
+					    <div class="carousel-section box-wrap">
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-5.jpg"
@@ -96,7 +96,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-6.jpg"
@@ -113,7 +113,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-7.jpg"
@@ -130,7 +130,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-8.jpg"
@@ -149,7 +149,7 @@
 			
 					    </div>
 			
-					    <div class="carousel-section">
+					    <div class="carousel-section box-wrap">
 			
 					      <div class="blog-carousel-item">
 						      <a href="#">
@@ -168,7 +168,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-10.jpg"
@@ -185,7 +185,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-11.jpg"
@@ -202,7 +202,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-12.jpg"
@@ -221,9 +221,9 @@
 			
 					    </div>
 			
-					    <div class="carousel-section">
+					    <div class="carousel-section  box-wrap">
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-13.jpg"
@@ -240,7 +240,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-14.jpg"
@@ -257,7 +257,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-15.jpg"
@@ -274,7 +274,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-16.jpg"
@@ -291,9 +291,9 @@
 						    </div>	
 					    </div>
 			
-					    <div class="carousel-section">
+					    <div class="carousel-section  box-wrap">
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-17.jpg"
@@ -310,7 +310,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-18.jpg"
@@ -327,7 +327,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-19.jpg"
@@ -344,7 +344,7 @@
 	
 						    </div>
 			
-					      <div class="blog-carousel-item">
+					      <div class="blog-carousel-item box">
 						      <a href="#">
 							    	<amp-img
 							    		src="<?= $images; ?>/article-20.jpg"

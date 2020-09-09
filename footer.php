@@ -3,8 +3,11 @@
 				<footer class="gray-texture-bg container-fluid">
 					<div class="container">
 						
-						<?php get_template_part('parts/footer-links'); ?>
-						<?php get_template_part('parts/footer-subscribe'); ?>
+						<?php $detect = new Mobile_Detect;
+							if ( !$detect->isMobile() ) { 
+							get_template_part('parts/footer-links'); 
+							get_template_part('parts/footer-subscribe');
+						} ?>
 
 						<div id="copyright" class="row">
 							<div class="col push-right">

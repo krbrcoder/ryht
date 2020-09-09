@@ -2,8 +2,22 @@
 		<section id="main-body">
     <?php $images = get_stylesheet_directory_uri().'/assets/images'; ?>
 
-			<?php get_template_part('parts/video'); ?>
-			<?php get_template_part('parts/social-bar'); ?>
+			<?php  $detect = new Mobile_Detect;
+				if ( !$detect->isMobile() ) { 
+					get_template_part('parts/video'); 
+					get_template_part('parts/social-bar'); 
+				} else { ?>
+					<div class="container-fluid">
+						<amp-img 
+								width="400"
+							  height="323"
+								layout="responsive"
+								src="<?= $images; ?>/video-placeholder.jpg"
+				    		>
+				    </amp-img>
+				  </div>
+			  <?php } ?>
+
 
 			<?php /* BEGIN FUTURE OF TEXAS & SITE LINKS AREA */ ?>
 			<div class="container-fluid light-gray-gradient">
@@ -23,54 +37,62 @@
 					</div>
 		
 					<div id="foundation-policy-advocacy-storytelling" class="col-7">
-						<amp-fit-text class="aligncenter" width="400" height="300" layout="responsive" max-font-size="22">
-							<div class="circle">
+						<div class="super-box">
+							<div class="magic-box magic-box-1">
+								<div class="icon_bg"></div>
+							</div>
+							<div class="icon">
 								<amp-img
 									src="<?= $images; ?>/foundation-icon.png"
-									width="1"
-									height="1"
-									layout="responsive"
+									width="125"
+									height="125"
 									alt="puzzle pieces - foundation icon"
 								></amp-img>
 							</div>
-							Our Foundation
-						</amp-fit-text>
-						<amp-fit-text class="aligncenter" width="400" height="300" layout="responsive" max-font-size="22">
-							<div class="circle">
+							<div class="title">Our Foundation</div>
+						</div>
+						<div class="super-box">
+							<div class="magic-box magic-box-2">
+								<div class="icon_bg"></div>
+							</div>
+							<div class="icon">
 								<amp-img
 									src="<?= $images; ?>/capitol-icon.png"
-									width="1"
-									height="1"
-									layout="responsive"
+									width="125"
+									height="125"
 									alt="Texas State capitol - policy icon"
 								></amp-img>
 							</div>
-							Policy
-						</amp-fit-text>
-						<amp-fit-text class="aligncenter" width="400" height="300" layout="responsive" max-font-size="22">
-							<div class="circle">
+							<div class="title">Policy</div>
+						</div>
+						<div class="super-box">
+							<div class="magic-box magic-box-3">
+								<div class="icon_bg"></div>
+							</div>
+							<div class="icon">
 								<amp-img
 									src="<?= $images; ?>/advocacy-icon.png"
-									width="1"
-									height="1"
-									layout="responsive"
+									width="125"
+									height="125"
 									alt="map with map marker - advocacy icon"
 								></amp-img>
 							</div>
-							Advocacy
-						</amp-fit-text>
-						<amp-fit-text class="aligncenter" width="400" height="300" layout="responsive" max-font-size="22">
-							<div class="circle">
+							<div class="title">Advocacy</div>
+						</div>
+						<div class="super-box">
+							<div class="magic-box magic-box-4">
+								<div class="icon_bg"></div>
+							</div>
+							<div class="icon">
 								<amp-img
 									src="<?= $images; ?>/stories-icon.png"
-									width="1"
-									height="1"
-									layout="responsive"
+									width="125"
+									height="125"
 									alt="movie marker - stories icon"
 								></amp-img>
 							</div>
-							Storytelling
-						</amp-fit-text>
+							<div class="title">Storytelling</div>
+						</div>
 					</div>
 
 				</div>
@@ -92,7 +114,7 @@
 							</div>
 							<div class="col">
 								<a href="#">
-									<amp-img class="featured-img"
+									<amp-img class="featured-img blurgray"
 										src="<?= $images; ?>/teachers-can.png"
 										width="693"
 										height="391"
@@ -109,7 +131,7 @@
 			
 			<?php get_template_part('parts/other-featured-content'); ?>
 			
-			<?php get_template_part('parts/blog-carousel'); ?>
+			<?php if ( !$detect->isMobile() ) { get_template_part('parts/blog-carousel'); } ?>
 			
 			</section>
 

@@ -35,6 +35,7 @@ hr {
 		text-align: center;
 	}
 	.circle {
+		cursor: pointer;
 		border-radius: 50%;
 		background: white;
 		margin: 0 auto 25px;
@@ -58,7 +59,6 @@ hr {
 		background: rgba(0,0,0,.6);
 		.col {
 			background: #39ace2;
-			max-width: 375px;
 			margin: 10% auto 0;
 			box-shadow: 0 3px 6px black;
 			padding: 10px;
@@ -85,28 +85,6 @@ hr {
 }
 
 #other-featured-content {
-	.category-bg {
-		&-1 {
-			background: url('../wp-content/themes/ryht/assets/images/category-1-bg.png') no-repeat;
-			background-position: center center;
-			.image {
-				margin: 0 auto;
-			}
-		}
-		&-3 {
-			background-color: #1b1b1b;
-		}
-		&-1, &-2, &-3 {
-			max-width:100%;
-			border: 1px solid $gray;
-			&:hover, &:active, &:focus {
-				box-shadow: $boxshadow;
-				.image {
-					// place zoom animation here???
-				}
-			}
-		}
-	}
 	.category {
 		&-title {
 			font-size: 14px;
@@ -164,6 +142,9 @@ hr {
 		.col {
 			padding: 0;
 		}
+		.modal .col {
+			width: 80%;
+		}
 	}
 	#featured-content {
 		.row {
@@ -178,7 +159,7 @@ hr {
 			padding: 0;
 		}
 		.row {
-			padding: 0 45px;
+			padding: 0 20px;
 		}
 		.button {
 			display:none;
@@ -186,7 +167,7 @@ hr {
 		.category-subtitle {
 			margin: 12px 0 30px;
 		}
-		.col {
+		.box {
 			border-bottom: 1px solid $gray;
 			margin-bottom: 35px;
 			&:last-child {
@@ -240,6 +221,13 @@ hr {
 			}
 		}
 	}
+	#subscribe {
+		.modal {
+			.col {
+				max-width: 375px;
+			}
+		}
+	}
 	#featured-content {
 		.row {
 			padding: 70px 170px;
@@ -256,10 +244,9 @@ hr {
 			box-shadow: $boxshadow;
 			z-index: 1;
 		}
-	}
-	#other-featured-content {
 		.container {
-			padding-bottom: 2%;		
+			padding-bottom: 2%;	
+			margin: 0 auto;	
 		}
 		h2 {
 			margin: 25px 30px 45px;

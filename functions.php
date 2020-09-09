@@ -32,6 +32,6 @@
     }
 	add_action( 'wp_print_scripts', 'dequeue_unnecessary_scripts' );
 
-	require_once ( THEME_ASSETS. '/library/Mobile-Detect-2.8.34/Mobile_Detect.php' );
+	require_once ( THEME_ASSETS . '/library/Mobile-Detect-2.8.34/Mobile_Detect.php' );
 	
 ?>
