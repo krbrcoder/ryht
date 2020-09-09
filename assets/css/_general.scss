@@ -1,65 +1,3 @@
-@media (max-width:599px) {
-	.hide-sm {
-		visibility: hidden;
-	}	
-}
-@media (min-width:600px) {
-	.hide-sm {
-		visibility: visible;
-	}
-}
-.p-2 {
-	padding-right: 2rem;
-}
-.light-gray-gradient {
-	background: rgb(238,238,238);
-	background: linear-gradient(90deg, #EEE 30%, #F9F9F9 100%);
-	border-bottom: 1px solid $gray;
-}
-#future-of-texas {
-	background: #EEE;
-	border-right: 1px solid $gray;
-	text-align: center;
-	padding-top: 45px;
-	.main-img {
-		max-width:300px;
-		margin: 20px auto 30px;
-	}
-	p {
-		margin: 0 45px 10px;
-	}
-}
-#foundation-policy-advocacy-storytelling {
-	background: #F9F9F9;
-	padding-top: 45px;
-	padding-bottom: 40px;
-	padding-left: 0;
-	amp-fit-text {
-		width: 49.5%;
-		display:inline-block;
-		text-align: center;
-		&:nth-child(odd) {
-			border-right:1px solid $gray;
-		}
-		&:nth-child(1) {
-			border-bottom: 1px solid $gray;
-			margin-bottom: -5px;
-		}
-		&:nth-child(2) {
-			border-bottom: 1px solid $gray;
-			margin-bottom: -5px;
-			margin-left: -4px;
-		}
-	}
-	.circle {
-		border-radius: 50%;
-		background: white;
-		margin: 0 auto 25px;
-		width: 120px;
-		height: 120px;
-		box-shadow: $boxshadow;
-	}
-}
 .sr-only {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px); /* 1 */
@@ -73,32 +11,8 @@
 	width: 1px;
 	white-space: nowrap; 
 }
-#subscribe {
-	background: $lightblue;
-	align-content: center;
-	text-align: center;
-	padding-top: 5px;
-	padding-bottom: 30px;
-	h2 {
-		font-size: 24px;
-		font-weight: 400;
-		color: $blue;
-		margin-bottom: 5px;
-	}
-}
-#featured-content {
-	background-color: #656565;
-	color: #FFF;
-	h2 {
-		margin-top: 0;
-	}
-	.row {
-		padding: 70px 130px;
-	}
-	.featured-img {
-		max-width: 490px;
-		border: 3px solid white;
-	}
+.p-2 {
+	padding-right: 2rem;
 }
 hr {
 	&.blue-line {
@@ -108,47 +22,82 @@ hr {
 		display:block;
 	}
 }
-#other-featured-content {
-	background: rgb(101,101,101);
-	background: linear-gradient(180deg, rgba(101,101,101,1) 18%, #FFF 18.1%, #FFF 80%, #EEE 80.1%);
-	.container {
-		padding-bottom: 2%;		
+#future-of-texas {
+	background: #EEE;
+	text-align: center;
+	padding-top: 45px;
+	padding-bottom:45px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+#foundation-policy-advocacy-storytelling {
+	amp-fit-text {
+		text-align: center;
 	}
-	.light-gray-bg {
-		background-color: $lightgray;
-		padding-bottom: 35px;
-		padding-left: 20px;
-		padding-right: 20px;
+	.circle {
+		border-radius: 50%;
+		background: white;
+		margin: 0 auto 25px;
+		width: 120px;
+		height: 120px;
 		box-shadow: $boxshadow;
-		z-index: 1;
 	}
+}
+#subscribe {
+	background: $lightblue;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 30px;
 	h2 {
-		margin: 25px 30px 45px;
-		width: 100%;
+		font-size: 24px;
+		font-weight: 400;
+		color: $blue;
+		margin-bottom: 5px;
 	}
-	h3 {
-		margin: 20px 0;
+	.modal {
+		background: rgba(0,0,0,.6);
+		.col {
+			background: #39ace2;
+			max-width: 375px;
+			margin: 10% auto 0;
+			box-shadow: 0 3px 6px black;
+			padding: 10px;
+		}
+		h3 {
+			margin-top: 20px;
+		}
+		p {
+			color: white;
+			font-weight: bold;
+		}
 	}
+}
+#featured-content {
+	background-color: #656565;
+	color: #FFF;
+	h2 {
+		margin-top: 0;
+	}
+	.featured-img {
+		max-width: 490px;
+		border: 3px solid white;
+	}
+}
+
+#other-featured-content {
 	.category-bg {
 		&-1 {
 			background: url('../wp-content/themes/ryht/assets/images/category-1-bg.png') no-repeat;
 			background-position: center center;
 			.image {
-				top: 70px;
-				width: 335px;
 				margin: 0 auto;
 			}
 		}
 		&-3 {
 			background-color: #1b1b1b;
-			.image {
-// 				bottom: -120px;
-				height: 459px;
-			}
 		}
 		&-1, &-2, &-3 {
 			max-width:100%;
-			height: 459px;
 			border: 1px solid $gray;
 			&:hover, &:active, &:focus {
 				box-shadow: $boxshadow;
@@ -160,85 +109,13 @@ hr {
 	}
 	.category {
 		&-title {
-			font-size: .8rem;
+			font-size: 14px;
 			margin-top: 10px;
 			margin-bottom: 0;
 			display:block;
 		}
 		&-subtitle {
 			color: $textcolor;
-		}
-	}
-	.button {
-		text-align: center;
-		margin: 0 auto;
-		display:block;
-		width: 147px;
-	}
-}
-#latest-blogs {
-	padding: 0 0 100px;
-	background: #EEEEEE;
-	h2 {
-		margin: 0 100px 50px;
-	}
-	amp-carousel {
-		margin: 0 65px;
-	}
-	.blog-carousel-item {
-		amp-img {
-			max-width: 75px;
-			clear: both;
-		}
-		.text-area {
-			display: block;
-			margin-top: -78px;
-			margin-left: 85px;
-		}
-		.date {
-			color: $textcolor;
-			display:block;
-			width: 100%;
-		}
-		.article-title {
-			margin-top: 10px;
-			font-size: .8rem;
-			color: $textcolor;
-			display:block;
-			width: 100%;
-		}
-	}
-	.amp-carousel-button {
-		border-radius: 50%;
-		color: $textcolor;
-		background-repeat: no-repeat;
-		&.amp-carousel-button-prev {
-			background: url('../wp-content/themes/ryht/assets/images/prev-arrow.svg') no-repeat;
-			background-color: white;
-			background-size: 8px;
-			background-position: 11px 10px;
-		}
-		&.amp-carousel-button-next {
-			background: url('../wp-content/themes/ryht/assets/images/next-arrow.svg') no-repeat;
-			background-color: white;
-			background-size: 8px;
-			background-position: 14px 10px;
-		}
-	}
-	.view-blogs {
-		margin-top: 20px;
-		font-size: .85rem;
-		float: right;
-		text-align: right;
-		margin-right: 80px;
-		color: $vividblue;
-		&:after {
-			width: 15px;
-	    height: 15px;
-	    display: inline-block;
-	    margin: -3px 3px -3px 8px;
-			content: "";
-			background: url('../wp-content/themes/ryht/assets/images/lightblue-arrow.svg') no-repeat;
 		}
 	}
 }
@@ -264,4 +141,170 @@ hr {
   position: absolute;
   top: -72px;
   left: 0;
+}
+@media (max-width:599px) {
+	.hide-sm {
+		display:none;
+	}
+	#future-of-texas {
+		border-bottom: 1px solid $gray;
+	}
+	#foundation-policy-advocacy-storytelling {
+		margin: 0 auto;
+		amp-fit-text {
+			width: 85vw;
+			border-bottom: 1px solid $gray;
+			margin: 0 auto;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+	#subscribe {
+		.col {
+			padding: 0;
+		}
+	}
+	#featured-content {
+		.row {
+			padding: 35px;
+		}
+		amp-img {
+			margin-top: 35px;
+		}
+	}
+	#other-featured-content {
+		.container {
+			padding: 0;
+		}
+		.row {
+			padding: 0 45px;
+		}
+		.button {
+			display:none;
+		}
+		.category-subtitle {
+			margin: 12px 0 30px;
+		}
+		.col {
+			border-bottom: 1px solid $gray;
+			margin-bottom: 35px;
+			&:last-child {
+				border-bottom: none;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+@media (min-width:600px) {
+	.hide-lg {
+		display: none;
+	}
+	.light-gray-gradient {
+		background: rgb(238,238,238);
+		background: linear-gradient(90deg, #EEE 30%, #F9F9F9 100%);
+		border-bottom: 1px solid $gray;
+	}
+	#future-of-texas {
+		border-right: 1px solid $gray;
+		padding-left: 50px;
+		padding-right: 0;
+		.main-img {
+			max-width:300px;
+			margin: 20px auto 30px;
+		}
+		p {
+			margin: 0 90px 10px;
+		}
+	}
+	#foundation-policy-advocacy-storytelling {
+		background: #F9F9F9;
+		padding-top: 45px;
+		padding-bottom: 40px;
+		padding-left: 0;
+		padding-right: 50px;
+		amp-fit-text {
+			width: 49.5%;
+			display:inline-block;
+			&:nth-child(odd) {
+				border-right:1px solid $gray;
+			}
+			&:nth-child(1) {
+				border-bottom: 1px solid $gray;
+				margin-bottom: -5px;
+			}
+			&:nth-child(2) {
+				border-bottom: 1px solid $gray;
+				margin-bottom: -5px;
+				margin-left: -4px;
+			}
+		}
+	}
+	#featured-content {
+		.row {
+			padding: 70px 170px;
+		}
+	}
+	#other-featured-content {
+		background: rgb(101,101,101);
+		background: linear-gradient(180deg, rgba(101,101,101,1) 18%, #FFF 18.1%, #FFF 80%, #EEE 80.1%);
+		.light-gray-bg {
+			background-color: $lightgray;
+			padding-bottom: 35px;
+			padding-left: 20px;
+			padding-right: 20px;
+			box-shadow: $boxshadow;
+			z-index: 1;
+		}
+	}
+	#other-featured-content {
+		.container {
+			padding-bottom: 2%;		
+		}
+		h2 {
+			margin: 25px 30px 45px;
+			width: 100%;
+		}
+		h3 {
+			margin: 20px 0;
+		}
+		.category-bg {
+			&-1 {
+				background: url('../wp-content/themes/ryht/assets/images/category-1-bg.png') no-repeat;
+				background-position: center center;
+				.image {
+					top: 70px;
+					width: 335px;
+					margin: 0 auto;
+				}
+			}
+			&-3 {
+				background-color: #1b1b1b;
+				.image {
+	// 				bottom: -120px;
+					height: 459px;
+				}
+			}
+			&-1, &-2, &-3 {
+				height: 459px;
+			}
+		}
+		.category {
+			&-title {
+				font-size: .8rem;
+				margin-top: 10px;
+				margin-bottom: 0;
+				display:block;
+			}
+			&-subtitle {
+				color: $textcolor;
+			}
+		}
+		.button {
+			text-align: center;
+			margin: 0 auto;
+			display:block;
+			width: 147px;
+		}
+	}
 }

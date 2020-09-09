@@ -2,10 +2,6 @@ footer {
 	&.gray-texture-bg {
 		background: url('../wp-content/themes/ryht/assets/images/footer-bg-edit.jpg') repeat;
 		border-bottom: 8px solid $primarycolor;
-		.container {
-			padding-top: 35px;	
-			padding-bottom: 30px;
-		}
 	}
 	color: white;
 	a {
@@ -66,13 +62,46 @@ footer {
 	}
 	#copyright {
 		font-size: .85rem;
-		amp-img {
-			float: right;
-		}
 	}
 	.address {
 		text-align: center;
 		font-size: .85rem;
 		padding-top: 25px;
+	}
+}
+@media (max-width:599px) {
+	footer {
+		.container {
+			max-width: 300px;
+		}
+		#copyright, .address {
+			text-align: center;
+			font-size: 12px;
+			padding-top: 0;
+		}
+		amp-img {
+			margin: 30px 0 10px;
+		}
+	}
+}
+@media (min-width:600px) {
+	footer {
+		&.gray-texture-bg {
+			.container {
+				padding-top: 35px;	
+				padding-bottom: 30px;
+			}
+		}
+		#copyright {
+			.col.push-right {
+				left: 70%;
+			}
+			.col-8.push-left {
+				right: 30%;
+			}
+			amp-img {
+				float: right;
+			}
+		}
 	}
 }

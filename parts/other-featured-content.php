@@ -4,7 +4,7 @@
 					<div class="container">
 						<div class="row light-gray-bg">
 							<h2>Other Featured Items Go Here</h2>
-
+	
 							<div class="col">
 								<div class="category-bg-1">
 									<amp-img class="image"
@@ -36,7 +36,7 @@
 							<div class="col">
 								<div class="category-bg-3">
 									<amp-anim class="image"
-										src="<?= $images; ?>/Census-GIF-V3.gif" 
+										src="<?= $images; ?>/category-2.gif" 
 										width="1" 
 										height="1" 
 										layout="responsive" 
@@ -49,7 +49,7 @@
 								<h4 class="category-subtitle">Census 2020<br />&nbsp;</h4>
 								<a class="button btn-outline-blue" href="#">Learn More</a>
 							</div>
-
+	
 						</div>
 					</div>
 				</div>				

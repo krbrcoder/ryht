@@ -15,3 +15,17 @@ a {
 h2 {
 	font-size: 2.275rem;
 }
+.view-blogs {
+	font-size: .85rem;
+	float: right;
+	text-align: right;
+	color: $vividblue;
+	&:after {
+		width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin: -3px 3px -3px 8px;
+		content: "";
+		background: url('../wp-content/themes/ryht/assets/images/lightblue-arrow.svg') no-repeat;
+	}
+}

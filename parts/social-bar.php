@@ -1,13 +1,12 @@
     <?php $images = get_stylesheet_directory_uri().'/assets/images'; ?>
 			<?php /* BEGIN SOCIAL SHARE */ ?>
-			<div id="social-bar">
+			<div id="social-bar" class="hide-sm">
 				<a href="#" class="rounded spin">
 					<amp-img class="facebook"
 						src="<?= $images; ?>/logos/facebook.svg"
-						width="1"
-						height="1"
+						width="35"
+						height="35"
 						alt="facebook icon"
-						layout="responsive"
 					></amp-img>
 				</a>
 				<a href="#" class="rounded spin">

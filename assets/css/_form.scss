@@ -1,17 +1,16 @@
 #subscribe-form {
 	color: red;
 	.required{
-		font-size: 22px;
+		font-size: 20px;
 		color: white;
 		position: absolute;
-		margin-left: 10px;
-    margin-top: -5px;		
+		margin-left: 8px;
+    margin-top: 15px;		
 	}
 }
 input[type="text" i], input[type="email" i] {
 	color: $darkgray;
 	width: 70%;
-	font-size: 18px;
 	padding: 12px;
 	font-family: $fontfamily;
 	font-weight: 600;
@@ -19,31 +18,78 @@ input[type="text" i], input[type="email" i] {
 	border:none;
 }
 input[type="submit" i] {
-	display: block;
-  margin: 16px 0 0 249px;
   padding: 12px;
   background: transparent;
-  color: $primarycolor;
-  border: 2px solid $primarycolor;
-  font-size: 18px;
   font-weight: 600;
-  text-align: right;
   font-family: $fontfamily;
-  width: 120px;
 }
 template.error {
 	background: rgba(255,255,255,.25);
 }
-#subscribe-cta-form {
-	input[type="submit" i] {
-		margin: 0 auto;
-		display: inline-block;
-	  color: $blue;
-	  border: 2px solid $blue;
-	  text-align: left;
-	}
+#subscribe-form-modal {
 	input[type="text" i], input[type="email" i] {
-		width: 400px;
-		margin: 20px 40px 20px 0;
+		width: 83%;
+		font-size: 16px;
+		margin: 20px 3px 0 0;
 	}
+	.required {
+		font-size: 16px;
+		color: white;
+		position: absolute;
+		margin-top: 18px;
+	}
+	input[type="submit" i] {
+		margin: 30px auto;
+		border-color: $textcolor;
+		color: $textcolor;
+		font-size: 16px;
+		text-align: center;
+	}
+}
+@media (max-width:599px) {
+	#subscribe-cta-form {
+		input[type="submit" i] {
+			margin: 0 auto;
+			display: inline-block;
+		  color: $blue;
+		  border: 2px solid $blue;
+		  text-align: left;
+			font-size: 18px;
+		}
+		input[type="text" i], input[type="email" i] {
+			width: 80vw;
+			margin: 15px auto 25px;
+			font-size: 18px;
+		}
+	}
+}
+@media (min-width:600px) {
+	#subscribe-cta-form {
+		input[type="submit" i] {
+			margin: 0 auto;
+			display: inline-block;
+		  color: $blue;
+		  border: 2px solid $blue;
+		  text-align: left;
+			font-size: 18px;
+		}
+		input[type="email" i] {
+			margin-right: 20px;
+		}
+	}
+		input[type="submit" i] {
+			margin: 16px 0 0 305px;
+			display: inline-block;
+		  color: $primarycolor;
+		  border: 2px solid $primarycolor;
+		  text-align: left;
+			font-size: 18px;
+		  width: 120px;
+		}
+		input[type="text" i], input[type="email" i] {
+			width: 400px;
+			margin: 20px 0;
+			font-size: 20px;
+		}
+	
 }

@@ -25,6 +25,12 @@
 	 wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
 	}
 	add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+	
+	function dequeue_unnecessary_scripts() {
+    wp_dequeue_script( 'wp-embed' );
+      wp_deregister_script( 'wp-embed' );
+    }
+	add_action( 'wp_print_scripts', 'dequeue_unnecessary_scripts' );
 
 	require_once ( THEME_ASSETS. '/library/Mobile-Detect-2.8.34/Mobile_Detect.php' );
 	

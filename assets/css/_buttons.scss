@@ -39,3 +39,29 @@ a.button {
 		margin-left: 8px;
 	}
 }
+button {
+	&.subscribe-button {
+		font-family: $fontfamily;
+		font-weight: 600;
+		background: none;
+		padding: 12px;
+		display:inline-block;
+		text-align: center;
+		font-size: 18px;
+		margin-top: 20px;
+		border: 2px solid $blue;
+		color: $blue;
+	}
+	&.close-button {
+		position: absolute;
+    background: $blue;
+    border: none;
+    padding: 3px 9px;
+    color: white;
+    font-size: 20px;
+    right: 0;
+    top: 0;
+	}
+}
+@media (max-width:599px) {
+}
